@@ -18,4 +18,4 @@ spec:
           ports:
             - containerPort: {{ .Values.containerPort }}
       imagePullSecrets:
-      - name: registrypullsecret
+      - name: helm
