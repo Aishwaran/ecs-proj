@@ -35,3 +35,7 @@ jobs:
 
       - name: Push Docker Image to ECR
         run: docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.ap-south-1.amazonaws.com/taskmaster:${{ env.SHA }}
+
+      - name: Update ECS Service
+        run: |
+          aws ecs update-service --cluster <cluster-name> --service <service-name> --force-new-deployment
