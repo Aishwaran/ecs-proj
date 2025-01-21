@@ -5,7 +5,7 @@ on:
     branches:
       - master  # Trigger the pipeline on push to master branch
     paths:
-      - 'Dockerfile'
+      - 'Dockerfile' 
       - 'server.js'
       - 'package.json'
 
